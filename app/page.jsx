@@ -1,6 +1,12 @@
 "use client";
 
+import { useQueryState } from "./useQueryState";
+import { useDebounceValue } from "./useDebounceValue";
+
 export default function Home() {
+  const [currentURL, setCurrentUrl] = useQueryState("search", "");
+  const debounceValue = useDebounceValue(currentURL, 500);
+
   return (
     <div className="flex flex-col gap-4 py-8 max-w-4xl m-auto px-4">
       <header className="flex items-center justify-between relative">
@@ -43,7 +49,19 @@ export default function Home() {
           </svg>
         </label>
       </header>
-      <main></main>
+      <main className="flex justify-center pt-8">
+        <fieldset className="fieldset bg-base-200 border-base-300 rounded-box  border p-4 w-lg max-w-2xl">
+          <legend className="fieldset-legend">Search</legend>
+          <input
+            type="text"
+            className="input w-full"
+            placeholder="Search a movie"
+            value={currentURL}
+            onChange={(e) => setCurrentUrl(e.target.value)}
+          />
+          <p className="label">{currentURL}</p>
+        </fieldset>
+      </main>
     </div>
   );
 }
