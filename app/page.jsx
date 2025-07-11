@@ -69,7 +69,7 @@ export default function Home() {
           />
         </fieldset>
       </main>
-      <div className="grid w-full grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 pt-2">
+      <div className="grid mx-auto justify-center grid-cols-2 md:grid-cols-3 gap-4 md:gap-10 pt-2">
         {debounceValue.length < 3 ? (
           <div className="flex justify-center items-center col-span-full w-full">
             <div role="alert" className="alert alert-warning">

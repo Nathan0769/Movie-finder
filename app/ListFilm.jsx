@@ -6,8 +6,11 @@ export const ListFilm = ({ data }) => {
   return (
     <>
       {data.Search.map((film) => (
-        <div key={film.imdbID} className="flex w-52 flex-col gap-4">
-          <div className="skeleton h-full w-full">
+        <div
+          key={film.imdbID}
+          className="flex w-full max-w-[12rem] flex-col gap-4 mx-auto"
+        >
+          <div className="skeleton h-full w-full overflow-hidden">
             <img
               src={film.Poster}
               className="h-full w-full object-cover rounded-md shadow aspect-[2/3]"
