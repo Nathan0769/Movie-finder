@@ -20,7 +20,7 @@ export default function Home() {
           Movie Finder
         </h1>
         <div className="flex-1"></div>
-        <div className="md:static absolute right-4 bottom-[-2.5rem] md:bottom-auto">
+        <div className="md:static absolute right-4 bottom-[-3rem] md:bottom-auto">
           <label className="flex cursor-pointer gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
